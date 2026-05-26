@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun!</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- === DECORATIVE STARS === -->
+    <div class="star" style="top: 5%; left: 8%; animation-delay: 0s">⭐</div>
+    <div class="star" style="top: 10%; right: 12%; animation-delay: 0.5s">
+      ✨
+    </div>
+    <div class="star" style="top: 80%; left: 5%; animation-delay: 1s">🌟</div>
+    <div class="star" style="top: 70%; right: 8%; animation-delay: 0.3s">
+      ⭐
+    </div>
+    <div class="star" style="top: 20%; left: 3%; animation-delay: 0.8s">✨</div>
+    <div class="star" style="top: 90%; right: 15%; animation-delay: 1.2s">
+      🌟
+    </div>
+
+    <!-- ===== ENVELOPE SCREEN ===== -->
+    <div id="envelopeScreen">
+      <p class="intro-text">
+        💌 Kamu punya pesan spesial!<br />Buka sekarang...
+      </p>
+
+      <div
+        class="envelope-wrapper"
+        id="envelopeWrapper"
+        onclick="openEnvelope()"
+      >
+        <div class="ribbon">🎀</div>
+
+        <div class="envelope">
+          <div class="env-body">
+            <div class="env-dots"></div>
+            <div class="env-stamp">💝</div>
+          </div>
+          <div class="env-left"></div>
+          <div class="env-right"></div>
+          <div class="env-bottom"></div>
+          <div class="env-flap"></div>
+          <div class="env-heart">❤️</div>
+        </div>
+      </div>
+
+      <p class="tap-hint">👆 Tap untuk membuka</p>
+    </div>
+
+    <!-- ===== CARD SCREEN ===== -->
+    <div id="cardScreen">
+      <div class="card">
+        <!-- Corner decorations handled by CSS ::before ::after -->
+
+        <h1 class="card-title">Selamat Ulang Tahun! 🎉</h1>
+
+        <!-- Photo Frame -->
+        <div class="photo-frame-wrapper">
+          <div class="frame-stars">
+            <span
+              class="fstar"
+              style="
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%) rotate(0deg) translateY(-88px);
+              "
+              >⭐</span
+            >
+            <span
+              class="fstar"
+              style="
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) translateX(88px);
+              "
+              >⭐</span
+            >
+            <span
+              class="fstar"
+              style="
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(88px);
+              "
+              >⭐</span
+            >
+            <span
+              class="fstar"
+              style="
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) translateX(-88px);
+              "
+              >⭐</span
+            >
+          </div>
+
+          <div class="photo-frame">
+            <div class="photo-frame-inner" id="photoFrameInner">
+              <img src="ipaa.jpeg" />
+            </div>
+          </div>
+
+          <!-- Flower decorations around frame -->
+          <span class="frame-deco">🌸</span>
+          <span class="frame-deco">🌺</span>
+          <span class="frame-deco">🌼</span>
+          <span class="frame-deco">🌷</span>
+        </div>
+
+        <input
+          type="file"
+          id="photoInput"
+          accept="image/*"
+          onchange="handlePhoto(event)"
+        />
+
+        <!-- Message -->
+        <div class="card-message">
+          Untuk Irpa Siti Badriah,... Selamat ulang tahun untuk salah satu orang
+          paling spesial dalam hidupku! Di hari yang luar biasa ini, aku berdoa
+          semoga kamu selalu diberikan kesehatan yang prima, kebahagiaan yang
+          utuh, dan kedamaian di setiap langkahmu. Semoga Tuhan melancarkan
+          segala urusanmu, memudahkan jalanmu dalam meraih cita-cita, dan
+          membuka pintu-pintu rezeki serta peluang baru yang berkah. 🎂
+        </div>
+
+        <p class="card-from">- Dari Pria Cool -</p>
+
+        <div class="card-footer-deco">🎁 🎊 🎈 🎂 🎊 🎁</div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
